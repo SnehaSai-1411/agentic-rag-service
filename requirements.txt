@@ -1,0 +1,19 @@
+# Core service
+fastapi
+uvicorn
+sse-starlette
+httpx
+python-dotenv
+
+# Retrieval + reranking (sentence-transformers pulls in torch; on a
+# CPU-only machine, install CPU-only torch first to avoid the ~500MB CUDA
+# wheel: pip install torch --index-url https://download.pytorch.org/whl/cpu)
+chromadb
+sentence-transformers
+
+# LLM providers (keys in .env; the service works without either)
+anthropic
+openai
+
+# Tests
+pytest
